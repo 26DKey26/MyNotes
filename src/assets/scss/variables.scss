@@ -1,0 +1,40 @@
+// Fonts
+$mainFont: "Montserrat", sans-serif;
+$mainFontColor: #000;
+$mainFontSize: 16px;
+$mainFontWeight: 400;
+$mainLineHeight: 1.3;
+
+// Colors
+$color-success: #1ec16f;
+$color-warning: #ff5100;
+
+// brand colors
+$color-brand-red: #e6000e;
+$color-brand-red_hover: #ff0010;
+$color-brand-mk: #e00180;
+$color-brand-mk_hover: #f5008c;
+$color-brand-mk_light: #ffb8d9;
+$color-brand-plum: #6a0f2c;
+$color-brand-yellow: #ffd500;
+$color-brand-pharma: #008794;
+$color-brand-pharma_hover: #00a3b3;
+$color-brand-pharma_light: #9bd7dd;
+
+// system colors:
+$color-black: hsl(0, 0%, 0%);
+$color-black-10: hsla(0, 0%, 0%, 0.1);
+$color-black-50: hsla(0, 0%, 0%, 0.5);
+$color-gray: #c4c7cc;
+$color-gray-light: #dce0e6;
+$color-fog: #f5f7fa;
+$color-for_hover: #ebeff5;
+$color-white: #ffffff;
+$color-disabled: #f7f9fa;
+
+// Animations
+$anim: cubic-bezier(0.58, 0.3, 0.005, 1);
+$animSpeed: 0.4s;
+
+// Shadows
+$shadowBase: 0 0 30px rgba(0, 0, 0, 0.2);

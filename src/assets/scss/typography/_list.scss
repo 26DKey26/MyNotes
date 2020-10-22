@@ -1,0 +1,51 @@
+// ul li
+.unordered-list {
+  @extend .block-margins;
+
+  li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: $base-vertical-margin * 0.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "";
+      width: 15px;
+      height: 2px;
+      display: block;
+      background: $color-brand-red;
+      position: absolute;
+      top: 0.6em;
+      left: 0;
+    }
+  }
+}
+
+// ol li
+.ordered-list {
+  @extend .block-margins;
+  counter-reset: myCounter;
+
+  li {
+    position: relative;
+    list-style: none;
+    padding-left: 30px;
+    margin-bottom: $base-vertical-margin * 0.5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      counter-increment: myCounter;
+      color: $color-brand-red;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: counter(myCounter) ". ";
+    }
+  }
+}

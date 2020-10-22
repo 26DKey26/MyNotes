@@ -1,0 +1,32 @@
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: $heading-font-weight;
+  line-height: $base-line-height * 0.8;
+  font-family: $mainFont;
+  font-weight: 500;
+}
+
+.h1 {
+  font-size: 200%;
+  font-weight: 700;
+}
+
+.h2 {
+  font-size: 180%;
+}
+
+.h3 {
+  font-size: 160%;
+}
+
+.h4 {
+  font-size: 140%;
+}
+
+.h5 {
+  font-size: 130%;
+}

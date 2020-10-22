@@ -1,0 +1,24 @@
+.modal{
+  &__title{
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+    @include sm-block() {
+      font-size: 22px;
+    }
+  }
+  &__header{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    border-bottom: 1px solid $color-gray-light;
+  }
+  &__content{
+    padding: 18px;
+  }
+}
+// fix modal bug
+.vm--modal {
+  overflow-y: auto !important;
+  max-height: 100% !important;
+}

@@ -1,0 +1,23 @@
+.link,
+a {
+  color: $link-color;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:visited {
+    color: $link-visited-color;
+  }
+
+  &:active {
+    color: $link-color;
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $link-hover-color;
+  }
+  &:disabled,
+  &[disabled] {
+    color: $color-gray;
+  }
+}

@@ -1,0 +1,146 @@
+// Typography //
+
+// Colors
+$text-color: $mainFontColor;
+$heading-color: $mainFontColor;
+
+// Links
+$link-color: $color-brand-red;
+$link-hover-color: $color-brand-red_hover;
+$link-visited-color: $color-brand-red_hover;
+
+// Font
+$base-font-family: $mainFont;
+$base-font-size: $mainFontSize;
+$base-font-weight: $mainFontWeight;
+$base-line-height: $mainLineHeight;
+$heading-font-family: $mainFont;
+$heading-font-weight: $mainFontWeight;
+
+// Margin
+$base-vertical-margin: 25px;
+$base-vertical-margin-mobile: 15px;
+
+.italic {
+  font-style: italic;
+}
+
+.bold,
+strong,
+b {
+  font-weight: 700;
+}
+.medium {
+  font-weight: 500;
+}
+.semibold {
+  font-weight: 600;
+}
+
+.block-margins {
+  margin: $base-vertical-margin 0;
+
+  @include sm-block() {
+    margin: $base-vertical-margin-mobile 0;
+  }
+}
+
+@import "_link";
+@import "_list";
+@import "_title";
+@import "_table";
+
+.typography {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: $base-font-family;
+  color: $text-color;
+
+  & > * {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  & > * {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  small {
+    font-size: 0.8em;
+  }
+
+  big {
+    font-size: 1.25em;
+  }
+
+  a {
+    @extend .link;
+  }
+
+  i,
+  em {
+    @extend .italic;
+  }
+
+  b,
+  strong {
+    @extend .bold;
+  }
+
+  h1,
+  .h1 {
+    @extend .h1;
+    @extend .block-margins;
+  }
+
+  h2,
+  .h2 {
+    @extend .h2;
+    @extend .block-margins;
+  }
+
+  h3,
+  .h3 {
+    @extend .h3;
+    @extend .block-margins;
+  }
+
+  h4,
+  .h4 {
+    @extend .h4;
+    @extend .block-margins;
+  }
+
+  h5,
+  .h5 {
+    @extend .h5;
+    @extend .block-margins;
+  }
+
+  h6,
+  .h6 {
+    @extend .h6;
+    @extend .block-margins;
+  }
+
+  p,
+  ul,
+  ol,
+  pre {
+    @extend .block-margins;
+  }
+
+  ul {
+    @extend .unordered-list;
+  }
+
+  ol {
+    @extend .ordered-list;
+  }
+
+  img {
+    @extend .block-margins;
+  }
+}

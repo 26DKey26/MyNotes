@@ -1,0 +1,79 @@
+// Field
+$field-height: 45px;
+$textarea-height: $field-height * 2;
+$field-font-size: 16px;
+$field-border-radius: 12px;
+.t-field {
+  $parent: &;
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  &__input,
+  &__textarea,
+  &__select {
+    border: solid 1px $color-gray-light;
+    height: $field-height;
+    width: 100%;
+    font-size: $field-font-size;
+    border-radius: $field-border-radius;
+    background: $color-white;
+    padding-left: 15px;
+    color: $color-black;
+    &::placeholder {
+      color: $color-black-50;
+    }
+    &:hover,
+    &:focus {
+      border-color: $color-gray;
+    }
+  }
+  &__select {
+    appearance: none;
+    padding-right: 30px;
+    &-wrap {
+      position: relative;
+      &:after {
+        content: "\F0140";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+        font: normal normal normal 16px/1 "Material Design Icons";
+        pointer-events: none;
+      }
+    }
+  }
+  &__textarea {
+    height: $textarea-height;
+    padding-top: 10px;
+  }
+  &__error-message {
+    margin-top: 5px;
+    color: $color-brand-red;
+  }
+  &--error {
+    label {
+      color: $color-brand-red;
+    }
+    #{$parent}__input,
+    #{$parent}__select {
+      border-color: $color-brand-red;
+    }
+  }
+  &--disabled {
+    label {
+      color: $color-gray;
+    }
+    #{$parent}__input,
+    #{$parent}__textarea,
+    #{$parent}__select {
+      border-color: $color-gray;
+      color: $color-gray;
+      cursor: not-allowed;
+    }
+  }
+}
+//-

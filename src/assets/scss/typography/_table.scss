@@ -1,0 +1,18 @@
+@mixin tableStyle {
+  table {
+    width: 100%;
+    th,
+    td {
+      padding: 10px;
+      vertical-align: middle;
+      font-size: 14px;
+      border: solid 1px $color-gray;
+    }
+    th {
+      border: none;
+      padding-left: 0;
+    }
+  }
+}
+
+@include tableStyle();

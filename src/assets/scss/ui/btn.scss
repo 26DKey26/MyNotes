@@ -1,0 +1,63 @@
+a.btn{
+  text-decoration: none;
+  color: #0e1227;
+}
+
+.btn{
+  $parent: &;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid #8dcf72;
+
+  &:hover{
+    cursor: pointer;
+    border-color: #a7f189;
+  }
+
+  &--icon{
+    height: 20px;
+    border: none;
+    padding: 0;
+    &:hover{
+      #{$parent}__icon{
+        color: #75c251;
+      }
+    }
+    #{$parent}__icon{
+      color: #969696;
+      transition: all .3s ease;
+    }
+  }
+
+  &--circle{
+    width: 35px;
+    height: 35px;
+    padding: 0;
+    border-radius: 50%;
+    border: 1px solid #8dcf72;
+    transition: all .3s ease;
+    &:hover{
+      box-shadow: 0px 5px 10px #8dcf72;
+    }
+    &:disabled{
+      border-color: #e0e0e0;
+      color: #e0e0e0;
+      &:hover{
+        box-shadow: none;
+        #{$parent}__icon{
+          color: #e0e0e0;
+        }
+      }
+    }
+  }
+
+  &--square{
+    width: 24px;
+    height: 24px;
+    border: 1px solid #dce0e6;
+  }
+}

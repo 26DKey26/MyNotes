@@ -1,0 +1,22 @@
+.row {
+  @include row-flex();
+  &:last-child {
+    margin-bottom: -20px;
+  }
+  & > * {
+    margin-bottom: 20px;
+  }
+}
+
+.col {
+  @include col();
+  flex-grow: 1;
+  @include size-sm(12);
+}
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include col();
+    @include size($i);
+    @include size-sm(12);
+  }
+}
